@@ -1,0 +1,224 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        .product-image img {
+            max-width: 90%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        /* Estilos para las lavadoras ilustradas */
+        
+        .washer {
+            width: 200px;
+            height: 240px;
+            border-radius: 20px;
+            position: relative;
+            margin: 0 auto;
+        }
+        
+        .washer-gray {
+            background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .washer-white {
+            background: linear-gradient(135deg, #ffffff 0%, #e5e7eb 100%);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .washer-white-2 {
+            background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .control-panel {
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            right: 20px;
+            height: 35px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            gap: 8px;
+        }
+        
+        .display {
+            width: 50px;
+            height: 20px;
+            background: #1f2937;
+            border-radius: 3px;
+        }
+        
+        .display-cyan {
+            background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+        }
+        
+        .button {
+            width: 25px;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 2px;
+        }
+        
+        .door {
+            position: absolute;
+            top: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, #94a3b8, #475569);
+            border: 12px solid #334155;
+            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .door-cyan {
+            border-color: #06b6d4;
+        }
+        
+        .door-white {
+            border-color: #1f2937;
+        }
+        
+        .door-black {
+            border-color: #000000;
+            background: radial-gradient(circle at 30% 30%, #374151, #1f2937);
+        }
+        
+        .door-inner {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 40% 40%, #64748b, #334155);
+        }
+        
+        .stripe {
+            position: absolute;
+            bottom: 25px;
+            left: 30px;
+            right: 30px;
+            height: 3px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+        
+        .stripe-black {
+            height: 30px;
+            background: #000000;
+            bottom: 45px;
+        }
+        
+        .product-title {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 25px;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1.4;
+        }
+        
+        .btn-quote {
+            display: inline-block;
+            padding: 12px 40px;
+            background: white;
+            color: #dc2626;
+            border: 2px solid #dc2626;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .btn-quote:hover {
+            background: #dc2626;
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5rem;
+                margin-bottom: 30px;
+            }
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .washer {
+                width: 180px;
+                height: 220px;
+            }
+            .door {
+                width: 110px;
+                height: 110px;
+                top: 55px;
+            }
+            .door-inner {
+                width: 70px;
+                height: 70px;
+            }
+        }
